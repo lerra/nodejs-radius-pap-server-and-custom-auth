@@ -14,7 +14,7 @@ if ($_GET[type]=="ean-8021x")
 
 	$username=mysql_real_escape_string($_POST['username']);
 
-    $select=" select Armband.EAN from Armband natural join Members where Members.Email  = '$username'";
+    $select=" select wristband.EAN from wristband natural join Members where Members.Email  = '$username'";
 
     
     $result=mysql_query($select);
@@ -27,7 +27,7 @@ if ($_GET[type]=="ean-8021x")
 		print_r($row[0]);
 	}
 	else
-		echo "FAILteizoJahjuodaephiR2opha9thooquaec6";
+		echo "FAIL";
     exit(0);
 }
 
