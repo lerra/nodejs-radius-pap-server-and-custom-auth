@@ -28,6 +28,8 @@ You need to change the api key in the following files, search for API-KEY-CHANGE
 ## Known limitations (send a PR!)
 - Only supports RADIUS PAP (password authentication protocol)
 - nodejs server is only setup to communicate to the api over http, needs to be fixed to https
+- Documentation
+- Testing
 ## Author
 
 Lezgin Bakircioglu (lerra 82 at gmail.com)
