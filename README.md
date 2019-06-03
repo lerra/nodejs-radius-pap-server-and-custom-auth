@@ -1,13 +1,13 @@
 # Intro
-This is a RADIUS server that authenticates requests to a api. Original code that was modified was from https://github.com/layeh/google-apps-radius
+This is a RADIUS server that authenticates requests to a api. Original code that was modified from https://github.com/layeh/google-apps-radius
 
-It have been used in production during the demoparty Birdie (https://www.birdie.org) in Uppsala, Sweden. We used the setup to as any out of the box solutions did not work as we build our own member and ticket registration system. 
+This code have been used in production during the demoparty Birdie (https://www.birdie.org) in Uppsala, Sweden. We used the setup to as other out of the box solutions (eg freeradius) did not work. 
 
 We used the visitors e-mail address as username, the barcode on there wrist as login for our secure wirless authentication. The radius server and our backend system resided on two different locations, the radius client was the Cisco WLC where the AP's proxied there radius requests. 
 
 You can take a look at the php code to get inspiration for your implementation. You will not be able to run that with out re-write 80% of it. 
 
-You will need to have the password (in our case, the barcode) in clear text to be able to use this custom auth with PAP, its part of the protocol where both sides knows the secret but does not exchange the secret in the radius communication (but it does after the radius server as we have a http api backend).
+You will need to have the password (in our case, the barcode) in clear text to be able to use this custom auth with PAP, its part of the protocol where both sides knows the secret but does not exchange the secret in the radius communication (but it does after the radius server as we have a http api backend). The reason why we needed to go with PAP is because we can not provide our visitors a certificate and the handling around it.
 
 Have in mind that I am not a nodejs coder, I just solve problems and this was one of our problems we had. Its a party hack where I wrote the one that was setup for google apps during a couple of hours. The only notes from the installation I have is "apt-get install npm freeradius-utils"
 
