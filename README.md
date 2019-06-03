@@ -12,11 +12,10 @@ You will need to have the password (in our case, the barcode) in clear text to b
 Have in mind that I am not a nodejs coder, I just solve problems and this was one of our problems we had. Its a party hack where I wrote the one that was setup for google apps during a couple of hours. The only notes from the installation I have is "apt-get install npm freeradius-utils"
 
 # Example setup
-I have provided some php code (./radius-script-auth-ean.php) to be used for custom authentication, a freeradius site-config example (./freeradius-site-config/inner-tunnel) to use that custom authentication. It was running on ubuntu 16.04 with freeradius, the backend server is a (old) LAMP server where the php code is running.
+I have provided some php code (./radius-script-auth-ean.php) to be used for the custom authentication. The nodejs part was running on ubuntu 16.04, the backend server is a (old) LAMP server where the php code is running.
 
 You need to change the api key in the following files, search for API-KEY-CHANGE-ME
 ./lib/index.js
-./freeradius-site-config/inner-tunnel
 ./radius-script-auth-ean.php
 ## The http api
 The code you need to write needs to take the username as a input and return the clear text secret (in our case, the EAN).
