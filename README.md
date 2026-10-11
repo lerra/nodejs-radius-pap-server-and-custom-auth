@@ -37,7 +37,7 @@ Example post username=$USERNAME, the result should just be the text in clear, eg
 - Testing
 
 # Author
-Lezgin Bakircioglu (lerra 82 at gmail.com)
+Lezgin Zilan (lerra 82 at gmail.com)
 
 ## License
 GPLv3
